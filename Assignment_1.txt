@@ -1,0 +1,78 @@
+create database Database_practice;
+
+use Database_practice;
+
+Create Table users(name varchar(20) , age Integer);
+
+Create Table codekata(user_name varchar(20) , email_id varchar(20));
+
+Create Table attendance(name varchar(20) , roll_number integer);
+
+Create Table topics(name varchar(20) , author varchar(20));
+
+Create Table tasks(name varchar(20) , user varchar(20));
+
+Create Table company_drives(name varchar(20) , user varchar(20));
+
+Create Table mentors(name varchar(20) , user varchar(20));
+
+Create Table students_activated_courses(name varchar(20) , user varchar(20));
+
+Create Table courses(name varchar(20) , user varchar(20));
+
+Insert into users values ('Sumit' , 20);
+Insert into users values ('Vishesh' , 21);
+Insert into users values ('Souvik' , 22);
+Insert into users values ('Aniban' , 20);
+Insert into users values ('Mark' , 32);
+
+Insert into codekata values ('Sumit' , 'abc@gmail.com');
+Insert into codekata values ('Vishesh' , 'xyz@gmail.com');
+Insert into codekata values ('Souvik' , 'pqr@gmail.com');
+Insert into codekata values ('Aniban' , 'jdie@gmail.com');
+Insert into codekata values ('Mark' , 'kwio@gmail.com');
+
+Insert into attendance values ('Sumit' , 1);
+Insert into attendance values ('Vishesh' , 2);
+Insert into attendance values ('Souvik' , 3);
+Insert into attendance values ('Aniban' , 4);
+Insert into attendance values ('Mark' , 5);
+
+Insert into topics values ('xyz book', 'Sumit');
+Insert into topics values ('abc book','Vishesh');
+Insert into topics values ('awe book','Souvik');
+Insert into topics values ('etgd book','Aniban');
+Insert into topics values ('dsdf book','Mark');
+
+Insert into tasks values ('xyz', 'Sumit');
+Insert into tasks values ('abc','Vishesh');
+Insert into tasks values ('awe','Souvik');
+Insert into tasks values ('etgd','Aniban');
+Insert into tasks values ('dsdf','Mark');
+
+Insert into company_drives values ('xyz', 'Sumit');
+Insert into company_drives values ('xyz','Vishesh');
+Insert into company_drives values ('awe','Souvik');
+Insert into company_drives values ('xyz','Aniban');
+Insert into company_drives values ('dsdf','Mark');
+
+Insert into mentors values ('xyz', 'Sumit');
+Insert into mentors values ('xyz','Vishesh');
+Insert into mentors values ('awe','Souvik');
+Insert into mentors values ('xyz','Aniban');
+Insert into mentors values ('dsdf','Mark');
+
+Insert into students_activated_courses values ('xyz', 'Sumit');
+Insert into students_activated_courses values ('xyz','Vishesh');
+Insert into students_activated_courses values ('awe','Souvik');
+Insert into students_activated_courses values ('xyz','Aniban');
+Insert into students_activated_courses values ('dsdf','Mark');
+
+Insert into courses values ('xyz', 'Sumit');
+Insert into courses values ('xyz','Vishesh');
+Insert into courses values ('awe','Souvik');
+Insert into courses values ('xyz','Aniban');
+Insert into courses values ('dsdf','Mark');
+
+-- list out all the mentors
+SELECT * FROM mentors;
