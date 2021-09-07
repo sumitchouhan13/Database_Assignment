@@ -1,78 +1,90 @@
-create database Database_practice;
+create database assignment_1;
 
-use Database_practice;
+use assignment_1;
 
-Create Table users(name varchar(20) , age Integer);
+create table users(user_id int , user_name varchar(45) , age int);
 
-Create Table codekata(user_name varchar(20) , email_id varchar(20));
+create table codekata(id int , user_name varchar(45) , problems_solved int , users_user_id int);
 
-Create Table attendance(name varchar(20) , roll_number integer);
+create table attendance(id int , number_of_days int , user_id int , users_user_id int);
 
-Create Table topics(name varchar(20) , author varchar(20));
+create table topics(topic_id int , topic_name varchar(45) , users_user_id int);
 
-Create Table tasks(name varchar(20) , user varchar(20));
+create table tasks(task_id int , task_name varchar(45) , users_user_id int , date_of_submission Date);
 
-Create Table company_drives(name varchar(20) , user varchar(20));
+create table company_drives(company_id int , company_name varchar(45) , date_of_visit Date);
 
-Create Table mentors(name varchar(20) , user varchar(20));
+create table mentors(mentor_id int , mentor_name varchar(45) , phone_number int , users_user_id int);
 
-Create Table students_activated_courses(name varchar(20) , user varchar(20));
+create table students_activated_courses(students_activated_courses_id int , course_name varchar(45) , activation_date Date , users_user_id int);
 
-Create Table courses(name varchar(20) , user varchar(20));
+create table courses(course_id int , course_name varchar(45) , users_user_id int);
 
-Insert into users values ('Sumit' , 20);
-Insert into users values ('Vishesh' , 21);
-Insert into users values ('Souvik' , 22);
-Insert into users values ('Aniban' , 20);
-Insert into users values ('Mark' , 32);
+insert into users values(1 , 'Sumit' , 22);
+insert into users values(2 , 'Souvik' , 21);
+insert into users values(3 , 'Anirban' , 24);
+insert into users values(4 , 'Vishesh' , 22);
+insert into users values(5 , 'Mark' , 21);
 
-Insert into codekata values ('Sumit' , 'abc@gmail.com');
-Insert into codekata values ('Vishesh' , 'xyz@gmail.com');
-Insert into codekata values ('Souvik' , 'pqr@gmail.com');
-Insert into codekata values ('Aniban' , 'jdie@gmail.com');
-Insert into codekata values ('Mark' , 'kwio@gmail.com');
+insert into codekata values(1 , 'Sumit' , 1000 , 1);
+insert into codekata values(2 , 'Souvik' , 100 , 2);
+insert into codekata values(3 , 'Anirban' , 300 , 3);
+insert into codekata values(4 , 'Vishesh' , 200 , 4);
+insert into codekata values(5 , 'Mark' , 900 , 5);
 
-Insert into attendance values ('Sumit' , 1);
-Insert into attendance values ('Vishesh' , 2);
-Insert into attendance values ('Souvik' , 3);
-Insert into attendance values ('Aniban' , 4);
-Insert into attendance values ('Mark' , 5);
+insert into attendance values(1 , 28 , 1 , 1);
+insert into attendance values(2 , 38 , 2 , 2);
+insert into attendance values(3 , 12 , 3 , 3);
+insert into attendance values(4 , 65 , 4 , 4);
+insert into attendance values(5 , 23 , 5 , 5);
 
-Insert into topics values ('xyz book', 'Sumit');
-Insert into topics values ('abc book','Vishesh');
-Insert into topics values ('awe book','Souvik');
-Insert into topics values ('etgd book','Aniban');
-Insert into topics values ('dsdf book','Mark');
+insert into topics values(1 , 'Java' , 1);
+insert into topics values(2 , 'C++' , 2);
+insert into topics values(3 , 'Python' , 3);
+insert into topics values(4 , 'C' , 4);
+insert into topics values(5 , 'ReactJs' , 5);
 
-Insert into tasks values ('xyz', 'Sumit');
-Insert into tasks values ('abc','Vishesh');
-Insert into tasks values ('awe','Souvik');
-Insert into tasks values ('etgd','Aniban');
-Insert into tasks values ('dsdf','Mark');
+insert into tasks values(1 , 'Assignment 1' , 1 , '2021-03-01');
+insert into tasks values(2 , 'Assignment 2' , 2 , '2021-05-01');
+insert into tasks values(3 , 'Assignment 1' , 3 , '2021-02-01');
+insert into tasks values(4 , 'Assignment 4' , 4 , '2021-01-01');
+insert into tasks values(5 , 'Assignment 3' , 5 , '2021-06-01');
 
-Insert into company_drives values ('xyz', 'Sumit');
-Insert into company_drives values ('xyz','Vishesh');
-Insert into company_drives values ('awe','Souvik');
-Insert into company_drives values ('xyz','Aniban');
-Insert into company_drives values ('dsdf','Mark');
+insert into company_drives values(2 , 'Amazon' , '2021-05-12');
+insert into company_drives values(1 , 'Google' , '2021-02-12');
+insert into company_drives values(5 , 'Microsoft' , '2021-01-12');
+insert into company_drives values(3 , 'Facebook' , '2021-08-12');
+insert into company_drives values(6 , 'Netflix' , '2021-03-12');
 
-Insert into mentors values ('xyz', 'Sumit');
-Insert into mentors values ('xyz','Vishesh');
-Insert into mentors values ('awe','Souvik');
-Insert into mentors values ('xyz','Aniban');
-Insert into mentors values ('dsdf','Mark');
+insert into mentors values(1 , 'Sundar' , 93821 , 1);
+insert into mentors values(2 , 'Nitin' , 93811 , 2);
+insert into mentors values(3 , 'Zucharbarg' , 13821 , 3);
+insert into mentors values(4 , 'Jersey' , 95821 , 4);
+insert into mentors values(5 , 'Pengu' , 63821 , 5);
 
-Insert into students_activated_courses values ('xyz', 'Sumit');
-Insert into students_activated_courses values ('xyz','Vishesh');
-Insert into students_activated_courses values ('awe','Souvik');
-Insert into students_activated_courses values ('xyz','Aniban');
-Insert into students_activated_courses values ('dsdf','Mark');
+insert into students_activated_courses values(1 , 'Competitive Coding' , '2021-02-12' , 1);
+insert into students_activated_courses values(2 , 'HTML' , '2021-01-12' , 2);
+insert into students_activated_courses values(3 , 'CSS' , '2021-05-12' , 3);
+insert into students_activated_courses values(4 , 'JAVASCRIPT' , '2021-08-12' , 4);
+insert into students_activated_courses values(5 , 'Machine Learning' , '2021-09-12' , 5);
 
-Insert into courses values ('xyz', 'Sumit');
-Insert into courses values ('xyz','Vishesh');
-Insert into courses values ('awe','Souvik');
-Insert into courses values ('xyz','Aniban');
-Insert into courses values ('dsdf','Mark');
+insert into courses values(1 , 'MEAN' , 1);
+insert into courses values(2 , 'MERN' , 2);
+insert into courses values(3 , 'FARM' , 3);
+insert into courses values(4 , 'MEAN' , 4);
+insert into courses values(5 , 'MERN' , 5);
 
--- list out all the mentors
-SELECT * FROM mentors;
+-- Total problems solved combining all the users
+select sum(problems_solved) as "Total Problems Solved by all the users" from codekata;
+
+-- Number of company drives attended by a user
+select company_name , user_name from company_drives right join users on users.user_id = company_drives.company_id;
+
+-- courses for a user
+select course_name from students_activated_courses as s , courses as t where s.course_name = t.course_name;
+
+-- list all the mentors
+select * from mentors;
+
+-- list all the students that are assigned to a mentor
+select * from users left join mentors on  user_id = users_user_id;
