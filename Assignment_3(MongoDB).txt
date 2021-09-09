@@ -1,0 +1,372 @@
+//Users Collection
+
+> db.users.insertMany([
+...     {
+... "name": "Tobias",
+... "age": 20,
+... "address": "Ap #776-560 Risus Avenue",
+... "college": "Pede Ac Urna PC",
+... "email": "ullamcorper.eu.euismod@rhoncusDonec.org"
+... },
+... {
+... "name": "Mira",
+... "age": 24,
+... "address": "Ap #998-7011 Justo Street",
+... "college": "Et Risus Incorporated",
+... "email": "ac@nectellus.net"
+... },
+... {
+... "name": "Acton",
+... "age": 23,
+... "address": "103-7671 Mauris Road",
+... "college": "Urna Corporation",
+... "email": "posuere.vulputate@arcu.edu"
+... },
+... {
+... "name": "Courtney",
+... "age": 29,
+... "address": "Ap #543-9260 Diam. Av.",
+... "college": "Aenean Sed Pede Ltd",
+... "email": "neque@enimCurabitur.org"
+... },
+... {
+... "name": "Chava",
+... "age": 25,
+... "address": "Ap #860-832 Ante Av.",
+... "college": "Ultrices Duis PC",
+... "email": "Cras@ad.co.uk"
+... }
+... ])
+
+//Codekata collections
+
+> db.codekata.insertMany([
+...     {
+... "name": "Tobias",
+... "problems_solved":100,
+... "email": "ullamcorper.eu.euismod@rhoncusDonec.org"
+... },
+... {
+... "name": "Mira",
+... "problems_solved":1080,
+... "email": "ac@nectellus.net"
+... },
+... {
+... "name": "Acton",
+... "problems_solved":1001,
+... "email": "posuere.vulputate@arcu.edu"
+... },
+... {
+... "name": "Courtney",
+... "problems_solved":1100,
+... "email": "neque@enimCurabitur.org"
+... },
+... {
+... "name": "Chava",
+... "problems_solved":400,
+... "email": "Cras@ad.co.uk"
+... }
+... ])
+
+//Attendance collection
+
+> db.attendance.insertMany([
+...     {
+... "name": "Tobias",
+... "status":"Present",
+... "email": "ullamcorper.eu.euismod@rhoncusDonec.org"
+... },
+... {
+... "name": "Mira",
+... "status":"Absent",
+... "email": "ac@nectellus.net"
+... },
+... {
+... "name": "Acton",
+... "status":"Absent",
+... "email": "posuere.vulputate@arcu.edu"
+... },
+... {
+... "name": "Courtney",
+... "status":"Present",
+... "email": "neque@enimCurabitur.org"
+... },
+... {
+... "name": "Chava",
+... "status":"Present",
+... "email": "Cras@ad.co.uk"
+... }
+... ])
+
+//topics collections
+
+> db.topics.insertMany([
+...   {
+...     "topic_name": "ReactJS",
+...     "user_attended": ["Acton", "Chava"],
+...     "month_started": "april"
+...   },
+...   {
+...     "name": "AngularJS",
+...     "user_attended": ["Courtney", "Mira", "Acton"],
+...     "month_started": "october"
+...   },
+...   {
+...     "name": "Java",
+...     "user_attended": ["Tobias", "Chava", "Mira"],
+...     "month_started": "december"
+...   },
+...   {
+...     "name": "Machine Learning",
+...     "user_attended": ["Tobias", "Acton"],
+...     "month_started": "october"
+...   },
+...   {
+...     "name": "Android Studio",
+...     "user_attended": ["Courtney", "Chava", "Tobias"],
+...     "month_started": "june"
+...   }
+... ]
+... )
+
+//Topics collections
+
+> db.topics.insertMany([
+...   {
+...     "topic_name": "ReactJS",
+...     "user_attended": ["Acton", "Chava"],
+...     "month_started": "april"
+...   },
+...   {
+...     "name": "AngularJS",
+...     "user_attended": ["Courtney", "Mira", "Acton"],
+...     "month_started": "october"
+...   },
+...   {
+...     "name": "Java",
+...     "user_attended": ["Tobias", "Chava", "Mira"],
+...     "month_started": "december"
+...   },
+...   {
+...     "name": "Machine Learning",
+...     "user_attended": ["Tobias", "Acton"],
+...     "month_started": "october"
+...   },
+...   {
+...     "name": "Android Studio",
+...     "user_attended": ["Courtney", "Chava", "Tobias"],
+...     "month_started": "june"
+...   }
+... ]
+... )
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("613a25d9aea268ea9690b294"),
+                ObjectId("613a25d9aea268ea9690b295"),
+                ObjectId("613a25d9aea268ea9690b296"),
+                ObjectId("613a25d9aea268ea9690b297"),
+                ObjectId("613a25d9aea268ea9690b298")
+        ]
+}
+> db.tasks.insertMany([
+...   {
+...     "task": "FirstTask",
+...     "task_status": [
+...         {
+...             "name":"Acton",
+...             "submitted":"Yes",
+...             "date":"12/11/2021"
+...         },
+...         {
+...             "name":"Courtney",
+...             "submitted":"No",
+...             "date":null
+...         },
+...         {
+...             "name":"Chava",
+...             "submitted":"Yes",
+...             "date":"27/10/2021"
+...         },
+...         {
+...             "name":"Mira",
+...             "submitted":"No",
+...             "date":null
+...         },
+...         {
+...             "name":"Tobias",
+...             "submitted":"Yes",
+...             "date":"18/10/2021"
+...         }
+...     ],
+...     "month_assigned": "october"
+...   },
+...   {
+...     "task": "SecondTask",
+...     "task_status": [
+...         {
+...             "name":"Acton",
+...             "submitted":"No",
+...             "date":null
+...         },
+...         {
+...             "name":"Courtney",
+...             "submitted":"yes",
+...             "date":"18/04/2021"
+...         },
+...         {
+...             "name":"Chava",
+...             "submitted":"No",
+...             "date":null
+...         },
+...         {
+...             "name":"Mira",
+...             "submitted":"Yes",
+...             "date":"27/04/2021"
+...         },
+...         {
+...             "name":"Tobias",
+...             "submitted":"Yes",
+...             "date":"18/04/2021"
+...         }
+...     ],
+...     "month_assigned": "April"
+...   }
+... ]
+... )
+
+//company_drive collection
+
+> db.company_drive.insertMany([
+...   {
+...     "company": "Amazon",
+...     "company_status": [
+...         {
+...             "name":"Acton",
+...             "attended":"Yes",
+...             "date":"12/11/2021"
+...         },
+...         {
+...             "name":"Courtney",
+...             "attended":"No",
+...             "date":null
+...         },
+...         {
+...             "name":"Chava",
+...             "attended":"Yes",
+...             "date":"27/10/2021"
+...         },
+...         {
+...             "name":"Mira",
+...             "attended":"No",
+...             "date":null
+...         },
+...         {
+...             "name":"Tobias",
+...             "attended":"Yes",
+...             "date":"18/10/2021"
+...         }
+...     ],
+...     "company_visit_date": "15/10/2021"
+...   },
+...   {
+...     "company": "Facebook",
+...     "company_status": [
+...         {
+...             "name":"Acton",
+...             "attended":"No",
+...             "date":null
+...         },
+...         {
+...             "name":"Courtney",
+...             "attended":"yes",
+...             "date":"18/04/2021"
+...         },
+...         {
+...             "name":"Chava",
+...             "attended":"No",
+...             "date":null
+...         },
+...         {
+...             "name":"Mira",
+...             "attended":"Yes",
+...             "date":"27/04/2021"
+...         },
+...         {
+...             "name":"Tobias",
+...             "attended":"Yes",
+...             "date":"18/04/2021"
+...         }
+...     ],
+...     "company_visit_date": "April"
+...   }
+... ]
+... )
+
+//Mentor collections
+
+> db.mentor.insertMany([
+...   {
+...     "mentor": "Mark",
+...     "mentees": [
+...       "Cairo",
+...       "Zorita",
+...       "Jorden",
+...       "Samantha",
+...       "Driscoll",
+...       "Cairo",
+...       "Zorita",
+...       "Jorden",
+...       "Samantha",
+...       "Driscoll",
+...       "Cairo",
+...       "Zorita",
+...       "Jorden",
+...       "Samantha",
+...       "Driscoll",
+...       "Britanni"
+...     ]
+...   },
+...   {
+...     "mentor": "Sundar",
+...     "mentees": [
+...       "Cairo",
+...       "Zorita",
+...       "Jorden",
+...       "Samantha",
+...       "Driscoll"
+...     ]
+...   }
+... ]
+... )
+
+
+//Topics and task started in month of october
+> db.tasks.find({month_assigned : "october"} , {task : 1}).pretty()
+{ "_id" : ObjectId("613a2ec3aea268ea9690b299"), "task" : "FirstTask" }
+> db.topics.find({"month_started":"october"} , {name:1}).pretty()
+{ "_id" : ObjectId("613a25d9aea268ea9690b295"), "name" : "AngularJS" }
+{ "_id" : ObjectId("613a25d9aea268ea9690b297"), "name" : "Machine Learning" }
+
+//Company visited in the month of october
+> db.company_drive.find({company_visit_date :{$gte : "15/10/2021",$lte:"30/10/2021"}} , {company:1})
+{ "_id" : ObjectId("613a2f7aaea268ea9690b29b"), "company" : "Amazon" }
+
+//Find all the company drives and students who are appeared for the placement.
+
+> db.company_drive.find({"company_status.attended":"yes"}).pretty()
+
+//Find the number of problems solved by the user in codekata
+
+> db.codekata.find({} , {problems_solved : 1 , name : 1})
+{ "_id" : ObjectId("613a226caea268ea9690b28a"), "name" : "Tobias", "problems_solved" : 100 }
+{ "_id" : ObjectId("613a226caea268ea9690b28b"), "name" : "Mira", "problems_solved" : 1080 }
+{ "_id" : ObjectId("613a226caea268ea9690b28c"), "name" : "Acton", "problems_solved" : 1001 }
+{ "_id" : ObjectId("613a226caea268ea9690b28d"), "name" : "Courtney", "problems_solved" : 1100 }
+{ "_id" : ObjectId("613a226caea268ea9690b28e"), "name" : "Chava", "problems_solved" : 400 }
+
+//Find all the mentors with who has the mentee's count more than 15
+
+> db.mentor.find( { $where: "this.mentees.length > 15" } , {mentor : 1} ).pretty()
+{ "_id" : ObjectId("613a307faea268ea9690b29d"), "mentor" : "Mark" }
+
